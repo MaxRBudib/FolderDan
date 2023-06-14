@@ -1,0 +1,43 @@
+[
+    {
+        "nombre": "Modulo 1",
+        "contenido": [
+            {
+                "tipo": "actividad",
+                "descripcion": "Actividad: ICA 1.1",
+                "fecha_entrega": "10 de jun"
+            },
+            {
+                "tipo": "leccion",
+                "descripcion": "Herencia",
+                "fecha_entrega": ""
+            },
+            {
+                "tipo": "archivo",
+                "descripcion": "Introducción a Python",
+                "fecha_entrega": ""
+            }
+        ]
+    },
+    {
+        "nombre": "Modulo 2",
+        "contenido": [
+            {
+                "tipo": "actividad",
+                "descripcion": "Actividad: ICA 1.1",
+                "fecha_entrega": "10 de jun"
+            },
+            {
+                "tipo": "leccion",
+                "descripcion": "Herencia",
+                "fecha_entrega": ""
+            },
+            {
+                "tipo": "archivo",
+                "descripcion": "Introducción a Python",
+                "fecha_entrega": ""
+            }
+        ]
+    }
+
+]

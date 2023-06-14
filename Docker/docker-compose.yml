@@ -1,0 +1,47 @@
+version: '3.3'
+services:
+  backend:
+    build: ./backend/programaster
+    ports:
+      - "9200:8000"
+    depends_on:
+      - db
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  frontend:
+    build: ./frontend/programaster
+    ports:
+      - "9203:3000"
+    depends_on:
+      - backend
+  code_runner:
+    build: ./backend/programaster/programasterApp/code
+    image: python_test
+    volumes:
+      - ${PWD}:/code
+
+
+  db:
+    image: postgres
+    restart: always
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "9201:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Prueba#123
+      POSTGRES_DB: Programaster
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pgadmin4@pgadmin.org"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+    ports:
+      - "9202:80"
+    depends_on:
+      - db
+
+volumes:
+  db-data:

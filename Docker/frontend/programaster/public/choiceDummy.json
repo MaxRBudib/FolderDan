@@ -1,0 +1,131 @@
+[
+    {
+        "id": "TC1028_#tema_tipo_#",
+        "author": "Nombre de autor",
+        "title": "Título del ejercicio",
+        "description": "Descripción del ejercicio",
+        "topic": "Tema al que está asociado este problema",
+        "difficulty": "Dificultad del ejercicio(fácil, intermedio, difícil)",
+        "answer": 0,
+        "hints": true,
+        "type": "Multiple",
+        "options": [
+            {
+                "text": "Opcion #1",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #2",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #3",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #4",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            }
+        ]
+    },
+    {
+        "id": "TC1028_#tema_tipo_#",
+        "author": "Nombre de autor",
+        "title": "Título del ejercicio",
+        "description": "Descripción del ejercicio 2",
+        "topic": "Tema al que está asociado este problema",
+        "difficulty": "Dificultad del ejercicio(fácil, intermedio, difícil)",
+        "answer": 0,
+        "hints": true,
+        "type": "Multiple",
+        "options": [
+            {
+                "text": "Opcion #1",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #2",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #3",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #4",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            }
+        ]
+    },
+    {
+        "id": "TC1028_#tema_tipo_#",
+        "author": "Nombre de autor",
+        "title": "Título del ejercicio",
+        "description": "Descripción del ejercicio 3",
+        "topic": "Tema al que está asociado este problema",
+        "difficulty": "Dificultad del ejercicio(fácil, intermedio, difícil)",
+        "answer": 0,
+        "hints": true,
+        "type": "Multiple",
+        "options": [
+            {
+                "text": "Opcion #1",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #2",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #3",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #4",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #5",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #6",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #7",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #8",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #9",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            },
+            {
+                "text": "Opcion #10",
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            }
+        ]
+    },
+    {
+        "id": "TC1028_#tema_tipo_#",
+        "author": "Nombre de autor",
+        "title": "Two Sum",
+        "description": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.\nYou may assume that each input would have exactly one solution, and you may not use the same element twice.\nYou can return the answer in any order.",
+        "topic": "Tema al que está asociado este problema",
+        "difficulty": "Fácil",
+        "answer": 0,
+        "hints": true,
+        "type": "Codigo",
+        "output": [
+            {
+                "expected": [1, 2, 3, 4, 5],
+                "explanation": "Explicación sobre por qué es correcta o incorrecta"
+            }
+
+        ]
+    }
+]
