@@ -67,7 +67,7 @@ if (typeof window !== "undefined") {
   const loginUser = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let valor = e.currentTarget.email.value.toString()
-    const response = await fetch('http://127.0.0.1:8000/my_view/token/', {
+    const response = await fetch('http://127.0.0.1:9200/my_view/token/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -82,14 +82,14 @@ if (typeof window !== "undefined") {
       setUser(data.access);
       localStorage.setItem('authTokens', JSON.stringify(data));
       setIsAuthenticated(true);
-      axios.get('http://127.0.0.1:8000/my_view/usuarios/', {
+      axios.get('http://127.0.0.1:9200/my_view/usuarios/', {
         params: {
           email: valor
         }
       }).then(response => {
 //        const rolon = response
         console.log(response.data[0].matricula_nomina)
-        axios.get('http://127.0.0.1:8000/my_view/usuarioGrupo/', {
+        axios.get('http://127.0.0.1:9200/my_view/usuarioGrupo/', {
           params: {
             matricula_nomina : response.data[0].matricula_nomina
           }

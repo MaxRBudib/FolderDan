@@ -29,7 +29,7 @@ export default function Home() {
 
   const [modulos, setModulos] = useState([])
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/my_view/modulo/', {
+    axios.get('http://127.0.0.1:9200/my_view/modulo/', {
       params:{
         grupo_id: query.queryparam
       }
@@ -65,7 +65,7 @@ export default function Home() {
 
     console.log(intento)
 
-    axios.post('http://127.0.0.1:8000/my_view/tarea/', intento, config).then((response) => {
+    axios.post('http://127.0.0.1:9200/my_view/tarea/', intento, config).then((response) => {
       
       alert("Form submited!");
       console.log(response.data)

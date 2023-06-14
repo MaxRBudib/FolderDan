@@ -81,7 +81,7 @@ export default function Home() {
             nombre: "Juan Carlos",
             apellido: "Ferrer Echeverria",
             grupo: "Programación Orientada a Objetos - Grupo 826",
-            matricula: "A01730000"
+            matricula: "A01792030"
         },
     ])
 

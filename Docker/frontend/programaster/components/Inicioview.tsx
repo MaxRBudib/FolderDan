@@ -42,7 +42,7 @@ export default function Home() {
   useEffect(() => {
     
     try {
-      axios.get('http://127.0.0.1:8000/my_view/usuarioGrupo/', {
+      axios.get('http://127.0.0.1:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: user.user_id
         }
@@ -51,7 +51,7 @@ export default function Home() {
         console.log(dataGrupo)
         setGrupos(dataGrupo)
         try {
-          axios.get('http://127.0.0.1:8000/my_view/anuncio/', {
+          axios.get('http://127.0.0.1:9200/my_view/anuncio/', {
             params: {
               grupo_id: dataGrupo
             }
@@ -80,7 +80,7 @@ export default function Home() {
   useEffect(() => {
     
     try {
-      axios.get('http://127.0.0.1:8000/my_view/usuarioGrupo/', {
+      axios.get('http://127.0.0.1:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: user.user_id
         }
@@ -91,7 +91,7 @@ export default function Home() {
         
 
 
-        axios.get('http://127.0.0.1:8000/my_view/grupo/', {
+        axios.get('http://127.0.0.1:9200/my_view/grupo/', {
         params: {
           grupo_id: dataGrupo
         }
@@ -101,7 +101,7 @@ export default function Home() {
         setNomina(dataNomina)
         
     
-        axios.get('http://127.0.0.1:8000/my_view/usuarios/', {
+        axios.get('http://127.0.0.1:9200/my_view/usuarios/', {
         params: {
           matricula_nomina: dataNomina
         }
@@ -130,7 +130,7 @@ export default function Home() {
   useEffect(() => {
     
     try {
-      axios.get('http://127.0.0.1:8000/my_view/usuarioGrupo/', {
+      axios.get('http://127.0.0.1:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: user.user_id
         }
@@ -139,7 +139,7 @@ export default function Home() {
         console.log(dataGrupo)
         setGrupos(dataGrupo)
         try {
-          axios.get('http://127.0.0.1:8000/my_view/modulo/', {
+          axios.get('http://127.0.0.1:9200/my_view/modulo/', {
             params: {
               grupo_id: dataGrupo
             }
@@ -149,7 +149,7 @@ export default function Home() {
 
 
 
-            axios.get('http://127.0.0.1:8000/my_view/tarea/', {
+            axios.get('http://127.0.0.1:9200/my_view/tarea/', {
             params: {
               grupo_id: dataGrupo
             }

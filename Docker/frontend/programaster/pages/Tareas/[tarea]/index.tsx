@@ -23,11 +23,11 @@ interface FormData {
 
 export default function Home() {
 
-  const baseTareaURL = "http://127.0.0.1:8000/my_view/tarea/";
-  const baseEjTarURL = "http://127.0.0.1:8000/my_view/ejercicioTarea/";
-  const baseEjURL = "http://127.0.0.1:8000/my_view/ejercicios/";
-  const baseOpcionesURL = "http://127.0.0.1:8000/my_view/opciones/";
-  const baseTestCasesURL = "http://127.0.0.1:8000/my_view/testCases/";
+  const baseTareaURL = "http://127.0.0.1:9200/my_view/tarea/";
+  const baseEjTarURL = "http://127.0.0.1:9200/my_view/ejercicioTarea/";
+  const baseEjURL = "http://127.0.0.1:9200/my_view/ejercicios/";
+  const baseOpcionesURL = "http://127.0.0.1:9200/my_view/opciones/";
+  const baseTestCasesURL = "http://127.0.0.1:9200/my_view/testCases/";
 
   const router = useRouter()
   const [tareaID, setTareaID] = useState('')
@@ -145,7 +145,7 @@ export default function Home() {
 
   const submitCode = () => {
     setSubmit(true)
-    axios.post('http://127.0.0.1:8000/my_view/code/', {code, submit}).then(({data}) => {
+    axios.post('http://127.0.0.1:9200/my_view/code/', {code, submit}).then(({data}) => {
         setResult(data['output'])
 
     })
@@ -185,7 +185,7 @@ export default function Home() {
 
     //console.log(intento)
 
-    axios.post('http://127.0.0.1:8000/my_view/tarea/', intento, config).then((response) => {
+    axios.post('http://127.0.0.1:9200/my_view/tarea/', intento, config).then((response) => {
 
       alert("Form submited!");
       //console.log(response.data)

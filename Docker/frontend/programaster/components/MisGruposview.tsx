@@ -22,7 +22,7 @@ export default function Home() {
       }
     }
     try {
-      axios.get('http://127.0.0.1:8000/my_view/usuarioGrupo/', {
+      axios.get('http://127.0.0.1:9200/my_view/usuarioGrupo/', {
         params: {
           matricula_nomina: user.user_id
         }
@@ -40,7 +40,7 @@ export default function Home() {
   useEffect(() => {
     try {
       const id_de_grupo= editos[0].grupo_id
-      axios.get('http://127.0.0.1:8000/my_view/grupo/', {
+      axios.get('http://127.0.0.1:9200/my_view/grupo/', {
         params: {
           grupo_id : id_de_grupo
         }
