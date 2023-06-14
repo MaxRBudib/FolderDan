@@ -14,11 +14,6 @@ services:
       - "9203:3000"
     depends_on:
       - backend
-  code_runner:
-    build: ./backend/programaster/programasterApp/code
-    image: python_test
-    volumes:
-      - ${PWD}:/code
 
 
   db:
