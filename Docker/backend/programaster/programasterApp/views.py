@@ -169,10 +169,7 @@ class CodeView(APIView):
         data = request.body
         data = json.loads(data)
         if data['submit'] == False:
-            data = request.body
-        data = json.loads(data)
-        if data['submit'] == False:
-            data = data['answ']
+            data = data['code']
             print(data)
             tests = '(["2", "3"], "5"), (["5", "10"], "15"), (["10", "15"], "25"),'
             #temporary directory
@@ -219,15 +216,19 @@ def test_example_123(monkeypatch: MonkeyPatch, test_input: str, expected_output:
     assert mocked_stdout.getvalue().strip() == expected_output  """)
             temp_file2.close()
             print("Temporary file path:", temp_file_path)
-            command = f"pytest {temp_file_path2}"
-            result= subprocess.run(command, capture_output=True, text=True, shell=True)
-            print(result)
-
-            output = result.stdout
+            result= subprocess.run(['bash', '-c', f'cd {temp_dir} && docker run -it --rm -v $PWD:/code python_test'], stdout=subprocess.PIPE)
+            output = result.stdout.decode('utf-8')
             print(output)
             passed_tests = re.findall(r'(\d+) passed', output)
             failed_tests = re.findall(r'(\d+) failed', output)
             response_data = {'output' : output, 'passed' : passed_tests, 'failed': failed_tests} 
+            return JsonResponse(response_data)
+        else:
+            with open('programasterApp/code/run_tests.py', 'w') as file:
+                file.write(data)
+            result = subprocess.run(['python3', 'programasterApp/code/testScripi.py'], stdout=subprocess.PIPE)
+            print(result.stdout.decode('utf-8'))
+            response_data = {'output' : result.stdout.decode('utf-8')}
             return JsonResponse(response_data)
         
 
